@@ -1,2 +1,5 @@
-# KBA-IQ-QUIZ
-KBA IQ is a quiz that displays 10 random music questions. The questions can vary from types of instruments to artist details. You will have 15 seconds to answer each question and if the time runs out, the question will be counted wrong.
+# kbc-quiz-app
+
+This web app was developed using javascript, css, and html. The quiz offers questions about music. The questions can be about songs, artsists, or genres. The app expects a user to input a name or it will assign a random name from random artists's names. The questions are pulled randomly each time from an object that is stored in an included .js file.
+
+The user has a specified amount of time to answer each question and will see a total score after all questions have neen answered.
