@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/quiz-styles.css">
+    <title>Music IQ Game</title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <div>
+            <h1>MUSIC IQ QUIZ</h1>
+            <p>Music IQ is a quiz that displays 10 random music questions. The questions can vary from types of
+                instruments
+                to artist details. You will have 15 seconds to answer each question and if the time runs out, the
+                question
+                will be counted wrong.</p>
+        </div>
+        <div>
+            <p id="info-btn" data-toggle="modal" data-target=".rules-modal-lg"><span
+                    class="glyphicon glyphicon-info-sign"
+                    aria-hidden="true"></span> game info
+            </p>
+            <p>Good Luck!</p>
+            <p id="reset-btn"><span
+                    class="glyphicon glyphicon-alert"
+                    aria-hidden="true"></span> reset game</p>
+        </div>
+
+        <div id="name-container">
+            <input type="text" id="user-name" placeholder="enter your name...">
+            <p id="name-btn" data-toggle="modal" data-target=".load-modal-lg">click to enter name</p>
+        </div>
+
+    </div>
+</div>
+<section id="rules">
+    <div class="modal fade rules-modal-lg" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <p>Music IQ Rules:</p>
+                <ul>
+                    <li>
+                        1. Use your ninja skills to answer the questions!
+                    </li>
+                    <li>
+                        2. You will be given 10 random questions that are related to music. They can be anything from
+                        questions about musical instruments to the color of a particular artist's hair!
+                    </li>
+                    <li>
+                        3. You will have 15 seconds to answer each question.
+                    </li>
+                    <li>
+                        4. When time runs out, the question will be counted incorrect.
+                    </li>
+                    <li>
+                        5. You will see your total score after you have answered 10 questions.
+                    </li>
+                    <li>
+                        6. Good luck and have fun!!.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="correct">
+    <div class="modal fade correct-modal-lg" id="correctModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="correct-modal">
+                <p class="its-right">you got it right!!</p>
+                <p class="right-wrong"><img src="images/right.png"></p>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="incorrect">
+    <div class="modal fade incorrect-modal-lg" id="incorrectModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="incorrect-modal">
+                <p class="its-right">you got it wrong!</p>
+                <p class="right-wrong"><img src="images/wrong.png"></p>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="load-game">
+    <div class="modal fade load-modal-lg" id="load-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <p id="player-name"></p>
+                <br>
+                <p id="adding-elements"></p>
+                <p id="music-questions"></p>
+                <p id="musical-instruments"></p>
+                <p id="genres"></p>
+                <p id="songs"></p>
+                <p id="artists"></p>
+                <p id="starting"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gameboard">
+
+    <div class="qanda" id="question-area">
+        <p id="question"></p>
+        <ul class="qanda" id="answers">
+        </ul>
+        <div id="timer-wrapper">
+            <p id="text-timer"></p>
+            <p id="timer" value="0"></p>
+        </div>
+        <div id="wrapper">
+            <p id="out-of-time"></p>
+            <p id="right-answer"></p>
+            <p id="wrong-answer"></p>
+        </div>
+        <div id="next-container">
+            <p id="next-btn"></p>
+        </div>
+        <div id="final-div">
+            <p id="winner-winner"></p>
+            <p id="final-answer"></p>
+            <p id="final-right"></p>
+            <p id="final-wrong"></p>
+            <p id="reset-game"></p>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <p>Developed by Kelly Carmichael</p>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/questions.js"></script>
+<script type="text/javascript" src="js/quizApp.js"></script>
+</body>
+</html>
